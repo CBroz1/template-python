@@ -92,6 +92,12 @@ format = [
   "npx -s -y prettier@'^3' . --write",
 ]
 
+[tool.hatch.envs.docs]
+dev-mode = false
+features = [
+  "docs",
+]
+
 [tool.hatch.envs.production]
 dev-mode = false
 features = []
