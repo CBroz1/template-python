@@ -1,10 +1,12 @@
+docs_dir: src
+site_dir: site
 edit_uri: ""
 markdown_extensions:
   - admonition
   - pymdownx.details
   - pymdownx.inlinehilite
   - pymdownx.magiclink:
-      user: br3ndonland
+      user: CBroz1
       repo: template-python
       repo_url_shorthand: true
   - pymdownx.snippets
@@ -17,8 +19,9 @@ markdown_extensions:
       toc_depth: 3
 nav:
   - "index.md"
-repo_name: br3ndonland/template-python
-repo_url: https://github.com/br3ndonland/template-python
+  - "examples.md"
+repo_name: CBroz1/template-python
+repo_url: https://github.com/CBroz1/template-python
 site_name: template-python docs
 site_url: ""
 theme:
@@ -36,15 +39,11 @@ theme:
   name: material
   palette:
     - media: "(prefers-color-scheme: dark)"
-      accent: cyan
-      primary: cyan
       scheme: slate
       toggle:
         icon: material/weather-night
         name: Switch to light mode
     - media: "(prefers-color-scheme: light)"
-      accent: cyan
-      primary: cyan
       scheme: default
       toggle:
         icon: material/weather-sunny

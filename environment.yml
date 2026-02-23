@@ -1,0 +1,17 @@
+name: template-python
+channels:
+  - conda-forge
+dependencies:
+  - python>=3.10,<3.14
+  - pip
+  - pip:
+      # package (editable install)
+      - -e .
+      # checks
+      - ruff>=0.15,<0.16
+      # docs
+      - mkdocs-material>=9,<10
+      # tests
+      - coverage[toml]>=7,<8
+      - packaging>=21,<25
+      - pytest>=8.1.1,<9

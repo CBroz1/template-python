@@ -7,9 +7,7 @@ about: Report a problem
 
 <!-- Provide clear description of the issue in 1-2 sentences. -->
 
-- System info
-  - Operating system and version: <!-- macOS 10.15.6 -->
-  - Browser and version: <!-- Firefox 79.0 -->
+- Operating system and version: <!-- macOS 10.15.6 -->
 - Steps to reproduce:
   - Step
   - Next step
@@ -24,6 +22,9 @@ about: Report a problem
 
 ## Related
 
-Relates to organization/repo#number <!-- Reference related commits, issues and pull requests. Type `#` and select from the list. -->
+Relates to organization/repo#number
 
-- [ ] I have reviewed the [Guidelines for Contributing](CONTRIBUTING.md) and the [Code of Conduct](CODE_OF_CONDUCT.md).
+<!-- Reference related commits, issues and pull requests. Type `#` and select from the list. -->
+
+- [ ] I have reviewed the [Guidelines for Contributing](CONTRIBUTING.md) and the
+    [Code of Conduct](CODE_OF_CONDUCT.md).

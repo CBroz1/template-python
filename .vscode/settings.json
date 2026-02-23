@@ -1,18 +1,47 @@
 {
-  "[json][markdown][yaml]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "[python]": {
-    "editor.codeActionsOnSave": {
-      "source.fixAll": "always",
-      "source.organizeImports": "always"
+    // GENERAL
+    "editor.insertSpaces": true, // tab -> spaces
+    "editor.rulers": [ 80 ], // vertical line at 80
+    "editor.stickyScroll.enabled": true, // Show scope
+    "files.associations": { "*.json": "jsonc" }, // Load JSON with comments
+    "files.autoSave": "onFocusChange", // Save on focus change
+    "files.exclude": { "**/__pycache*": true, "**/.ipynb_ch*": true, }, // Hide
+    "files.trimTrailingWhitespace": true,
+    "git.enabled": true,
+    "workbench.editorAssociations": { "*.ipynb": "jupyter-notebook", },
+
+    // PYTHON
+    "[python]": {
+        "editor.formatOnSave": true,
+        "editor.defaultFormatter": "charliermarsh.ruff",
+        "editor.codeActionsOnSave": { "source.fixAll.ruff": "explicit" },
     },
-    "editor.defaultFormatter": "charliermarsh.ruff",
-    "editor.formatOnSave": true,
-    "editor.rulers": [],
-    "editor.tabSize": 4
-  },
-  "[toml]": {
-    "editor.defaultFormatter": "tombi-toml.tombi"
-  }
+    "python.analysis.autoImportCompletions": false, // Disable auto-import
+    "python.languageServer": "Pylance",
+
+    // NOTEBOOKS
+    "jupyter.askForKernelRestart": false, // Prevent dialog box on restart
+    "jupyter.widgetScriptSources": ["jsdelivr.com", "unpkg.com"], // IPyWidgets
+    "notebook.output.textLineLimit": 15, // Limit output
+    "notebook.lineNumbers": "on", // Number lines in cells
+    "notebook.formatOnSave.enabled": true, // format cells on save
+
+    // AUTOCOMPLETION
+    "editor.tabCompletion": "on", // tab over suggestions
+    "github.copilot.editor.enableAutoCompletions": true, // Copilot
+    "cSpell.enabled": true, // SPELL
+    "cSpell.language": "en,en-US,companies,python,python-common",
+    "cSpell.maxDuplicateProblems": 2, // Only mention twice
+    "cSpell.spellCheckDelayMs": 500, // Wait 0.5s after save
+    "cSpell.enableFiletypes": [ "!json", "markdown", "yaml", "python" ],
+    "cSpell.logLevel": "Warning", // Only show warnings, can turn off
+
+    // MARKDOWN
+    "[markdown]": {
+        "editor.defaultFormatter": "DavidAnson.vscode-markdownlint",
+        "editor.formatOnSave": true,
+    },
+    "editor.codeActionsOnSave": { "source.fixAll.markdownlint": "explicit" },
+    "rewrap.reformat": true, // allows context-aware rewrapping
+    "rewrap.wrappingColumn": 80,
 }

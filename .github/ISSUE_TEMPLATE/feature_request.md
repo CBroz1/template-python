@@ -17,6 +17,8 @@ about: Suggest an idea for this project
 
 ## Related
 
-Relates to organization/repo#number <!-- Reference related commits, issues and pull requests. Type `#` and select from the list. -->
+Relates to organization/repo#number
+    <!-- Reference related commits, issues and pull requests. Type `#` and select from the list. -->
 
-- [ ] I have reviewed the [Guidelines for Contributing](CONTRIBUTING.md) and the [Code of Conduct](CODE_OF_CONDUCT.md).
+- [ ] I have reviewed the [Guidelines for Contributing](CONTRIBUTING.md) and the
+    [Code of Conduct](CODE_OF_CONDUCT.md).
