@@ -1,13 +1,17 @@
 {
     // GENERAL
     "editor.insertSpaces": true, // tab -> spaces
+    "editor.minimap.enabled": false, // Remove minimap clutter
     "editor.rulers": [ 80 ], // vertical line at 80
     "editor.stickyScroll.enabled": true, // Show scope
     "files.associations": { "*.json": "jsonc" }, // Load JSON with comments
     "files.autoSave": "onFocusChange", // Save on focus change
     "files.exclude": { "**/__pycache*": true, "**/.ipynb_ch*": true, }, // Hide
     "files.trimTrailingWhitespace": true,
+    "diffEditor.ignoreTrimWhitespace": false, // Show whitespace diffs
+    "git.autofetch": true, // Keep local branch in sync with remote
     "git.enabled": true,
+    "workbench.editor.highlightModifiedTabs": true, // Flag unsaved changes
     "workbench.editorAssociations": { "*.ipynb": "jupyter-notebook", },
 
     // PYTHON
@@ -17,6 +21,7 @@
         "editor.codeActionsOnSave": { "source.fixAll.ruff": "explicit" },
     },
     "python.analysis.autoImportCompletions": false, // Disable auto-import
+    "python.analysis.typeCheckingMode": "standard", // Catch type errors early
     "python.languageServer": "Pylance",
 
     // NOTEBOOKS

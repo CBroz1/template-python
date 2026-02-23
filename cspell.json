@@ -44,6 +44,7 @@
     "VIRTUALENV",
     "addopts",
     "apdisk",
+    "autofetch",
     "autohide",
     "blob",
     "celerybeat",
