@@ -3,8 +3,8 @@
 ## Description
 
 **Welcome!** This is a template repository for Python projects using the same
-tools that are used to manage [Spyglass](https://github.com/CBroz1/spyglass).
-Click
+tools that are used to manage
+[Spyglass](https://github.com/LorenFrankLab/spyglass). Click
 "[Use this template](https://github.com/new?template_name=template-python&template_owner=CBroz1)"
 to create your own repository from this template, then follow the
 [quickstart](#quickstart) below.
@@ -53,12 +53,26 @@ git grep -l "template-python" | xargs sed -i "s|template-python|$repo_name|g"
 
 ### 2. Create the conda environment
 
+This makes an isolated environment with all the dependencies needed to run the
+code and tests.
+
 ```sh
 conda env create -f environment.yml
 conda activate $repo_name
 ```
 
+Alternatively, you can update an existing environment with:
+
+```sh
+conda activate myenv
+conda env update --file environment.yml --prune
+```
+
 ### 3. Install pre-commit hooks
+
+This is a one-time setup step to install tools that will run automatic checks on
+your edits before you commit them. You can customize the hooks in
+`.pre-commit-config.yaml`.
 
 ```sh
 pre-commit install
@@ -72,11 +86,25 @@ pre-commit run --all-files
 
 ### 4. Run tests
 
+Tests help ensure your code is working as expected when you make changes.
+Example tests in `tests/` use the [pytest](https://docs.pytest.org/) framework.
+You can run the test suite with:
+
 ```sh
 pytest
 ```
 
+If you see failed tests, you may want to rerun the test with debugging enabled:
+
+```sh
+pytest --pdb -v tests/test_your_module.py -k test_your_function
+```
+
 ### 5. Build and serve docs locally
+
+[`mkdocs`](https://www.mkdocs.org/getting-started/) is a static website
+generator for documentation that can be automatically deployed as a
+[GitHub Page](https://www.mkdocs.org/user-guide/deploying-your-docs/).
 
 ```sh
 # serve with live reload
@@ -86,11 +114,12 @@ mkdocs serve -f docs/mkdocs.yml
 mkdocs build -f docs/mkdocs.yml
 ```
 
-## Documentation
-
-Documentation is built with
-[Material for MkDocs](https://squidfunk.github.io/mkdocs-material/). Source
-files are in `docs/src/` and configuration is in `docs/mkdocs.yml`.
+You can customize the documentation by editing the markdown files in `docs/src/`
+and the configuration in `docs/mkdocs.yml`. Various extensions can even
+automatically generate API reference documentation from your source code (e.g.,
+[`mkdocs-gen-files`](https://github.com/oprypin/mkdocs-gen-files)) or auto-run
+your notebooks to show as web pages (e.g.,
+[`mkdocs-jupyter`](https://github.com/danielfrg/mkdocs-jupyter)).
 
 ## Resources
 
